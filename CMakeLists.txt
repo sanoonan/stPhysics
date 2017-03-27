@@ -18,7 +18,7 @@ set(SOURCE_FILES
         Src/stMaths/Vec2.h
         Src/stMaths/Vec.cpp
         Src/stUtils/Assertions.h
-        Src/stMaths/VecDeclarations.h)
+        Src/stMaths/VecDeclarations.h Src/stMaths/Vec3.cpp Src/stMaths/Vec3.h)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/usr/local/include -fno-exceptions")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Cocoa -framework OpenGL -framework IOKit")

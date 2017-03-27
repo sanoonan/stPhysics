@@ -12,6 +12,8 @@ class Vec2Base : public Vec< T, 2 >
 public:
     Vec2Base( const T x, const T y )
     {
+        X() = x;
+        Y() = y;
     }
 
     T& X() { return Super::Get( 0 ); }

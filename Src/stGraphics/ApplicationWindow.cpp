@@ -1,8 +1,7 @@
 #include "ApplicationWindow.h"
 
-#include "stTypes/Vec2.h"
+#include "stMaths/Vec2.h"
 #include "stUtils/ErrorHandling.h"
-#include "stUtils/Log.h"
 
 #include <GLFW/glfw3.h>
 
@@ -14,10 +13,10 @@ ApplicationWindow& ApplicationWindow::Get()
     return instance;
 }
 
-bool ApplicationWindow::Open( const char* pszName, const stTypes::Vec2& size )
+bool ApplicationWindow::Open( const char* pszName, const stMaths::Vec2i& size )
 {
     ST_Ensure( pszName );
-    ST_Ensure( size.GreaterThanZero() );
+    ST_Ensure( size.AllGreaterThanZero() );
 
     ST_Ensure( !_glfwWindow );
 
@@ -30,7 +29,7 @@ bool ApplicationWindow::Open( const char* pszName, const stTypes::Vec2& size )
 
     ST_Ensure( glfwInit() );
 
-    ST_Ensure( _glfwWindow = glfwCreateWindow( size.w, size.h, pszName, NULL, NULL ) );
+    ST_Ensure( _glfwWindow = glfwCreateWindow( size.W(), size.H(), pszName, NULL, NULL ) );
     glfwMakeContextCurrent( _glfwWindow );
 
     ST_ReturnBool( "ApplicationWindow::Open() - failed!" );

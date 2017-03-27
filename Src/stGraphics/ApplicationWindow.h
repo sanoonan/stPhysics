@@ -1,12 +1,8 @@
 #pragma once
 
-#include <stUtils/StaticClass.h>
+#include "stMaths/VecDeclarations.h"
 #include "stTypes/Types.h"
 #include "stUtils/NonCopyable.h"
-
-namespace stTypes {
-struct Vec2;
-}
 
 class GLFWwindow;
 
@@ -18,7 +14,7 @@ public:
     static ApplicationWindow& Get();
 
 public:
-    bool Open( const char* pszName, const stTypes::Vec2& size );
+    bool Open( const char* pszName, const stMaths::Vec2i& size );
     void Close();
 
 private:

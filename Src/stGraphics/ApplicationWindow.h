@@ -17,6 +17,8 @@ public:
     bool Open( const char* pszName, const stMaths::Vec2i& size );
     void Close();
 
+    bool ShouldClose() const;
+
 private:
     ApplicationWindow() = default;
 

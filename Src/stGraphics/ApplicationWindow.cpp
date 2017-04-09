@@ -3,7 +3,7 @@
 #include "stMaths/Vec2.h"
 #include "stUtils/ErrorHandling.h"
 
-#include <GLFW/glfw3.h>
+#include "stGraphics/GLFWInclude.h"
 
 namespace stGraphics {
 
@@ -41,6 +41,14 @@ void ApplicationWindow::Close()
         return;
 
     glfwTerminate();
+}
+
+bool ApplicationWindow::ShouldClose() const
+{
+    if( _glfwWindow )
+        return glfwWindowShouldClose( _glfwWindow );
+
+    return true;
 }
 
 } //stGraphics

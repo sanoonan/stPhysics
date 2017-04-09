@@ -12,15 +12,15 @@ class Log : StaticClass
 
 public:
     template< typename... Args >
-    static void Error( const char* pszMsg, const Args&... args )
+    static void Error( const Args&... args )
     {
-        Print( "ERROR:", pszMsg, args..., "\n" );
+        Print( "ERROR:", args..., "\n" );
     }
 
     template< typename... Args >
-    static void Info( const char* pszMsg, const Args&... args )
+    static void Info( const Args&... args )
     {
-        Print( "INFO:", pszMsg, args..., "\n" );
+        Print( "INFO:", args..., "\n" );
     }
 
 private:

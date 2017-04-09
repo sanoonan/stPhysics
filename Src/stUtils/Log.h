@@ -24,30 +24,18 @@ public:
     }
 
 private:
-    template< typename... Args >
-    static void Print( const unsigned char* const pszMsg, const Args&... args )
+    template< typename T, typename... Args >
+    static void Print( const T msg, const Args&... args )
     {
-        Print( pszMsg );
+        Print( msg );
         Print( args... );
     }
 
-    static void Print( const unsigned char* const pszMsg )
+    template< typename T >
+    static void Print( const T msg )
     {
-        std::cout << pszMsg;
+        std::cout << msg;
     }
-
-    template< typename... Args >
-    static void Print( const char* const pszMsg, const Args&... args )
-    {
-        Print( pszMsg );
-        Print( args... );
-    }
-
-    static void Print( const char* const pszMsg )
-    {
-        std::cout << pszMsg;
-    }
-
 };
 
 } //stUtils

@@ -25,14 +25,14 @@ public:
 
 private:
     template< typename T, typename... Args >
-    static void Print( const T msg, const Args&... args )
+    static void Print( const T& msg, const Args&... args )
     {
         Print( msg );
         Print( args... );
     }
 
     template< typename T >
-    static void Print( const T msg )
+    static void Print( const T& msg )
     {
         std::cout << msg;
     }

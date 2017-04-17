@@ -8,8 +8,6 @@ namespace stUtils {
 
 class Log : StaticClass
 {
-
-
 public:
     template< typename... Args >
     static void Error( const Args&... args )

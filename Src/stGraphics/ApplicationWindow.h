@@ -4,7 +4,7 @@
 #include "stTypes/Types.h"
 #include "stUtils/NonCopyable.h"
 
-class GLFWwindow;
+struct GLFWwindow;
 
 namespace stGraphics {
 

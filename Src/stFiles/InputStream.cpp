@@ -5,6 +5,16 @@
 
 namespace stFiles {
 
+bool InputStream::ReadFileToString( stContainers::String& outString, const char* pszFilePath )
+{
+    InputStream iStream;
+    ST_Ensure( pszFilePath );
+    ST_Ensure( iStream.Open( pszFilePath ) );
+    ST_Ensure( iStream.ReadFile( outString ) );
+
+    ST_ReturnBool( ( "InputStream::ReadFileToString() - failed!" ) );
+}
+
 bool InputStream::Open( const char* pszFilePath )
 {
     ST_Ensure( pszFilePath );

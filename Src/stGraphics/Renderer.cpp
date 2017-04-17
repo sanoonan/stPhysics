@@ -1,6 +1,6 @@
 #include "Renderer.h"
 
-#include "stGraphics/GLEWWrapper.h"
+#include "stGraphics/GLWrapper.h"
 #include "stUtils/ErrorHandling.h"
 #include "stUtils/Log.h"
 
@@ -14,11 +14,11 @@ Renderer& Renderer::Get()
 
 bool Renderer::Init()
 {
-    ST_Ensure( GLEWWrapper::Init() );
+    ST_Ensure( GLWrapper::Init() );
 
 
 
-    ST_ReturnBool( "Renderer::Init() - failed!" );
+    ST_ReturnBool( ( "Renderer::Init() - failed!" ) );
 }
 
 

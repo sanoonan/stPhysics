@@ -18,7 +18,7 @@ set(SOURCE_FILES
         Src/stMaths/Vec2.h
         Src/stMaths/Vec.cpp
         Src/stUtils/Assertions.h
-        Src/stMaths/VecDeclarations.h Src/stMaths/Vec3.cpp Src/stMaths/Vec3.h Src/stGraphics/Renderer.cpp Src/stGraphics/Renderer.h Src/stGraphics/GLFWInclude.h Src/stGraphics/GLEWWrapper.cpp Src/stGraphics/GLEWWrapper.h)
+        Src/stMaths/VecDeclarations.h Src/stMaths/Vec3.cpp Src/stMaths/Vec3.h Src/stGraphics/Renderer.cpp Src/stGraphics/Renderer.h Src/stGraphics/GLFWInclude.h Src/stGraphics/GLWrapper.cpp Src/stGraphics/GLWrapper.h Src/stGraphics/Tri.cpp Src/stGraphics/Tri.h Src/stFiles/InputStream.cpp Src/stFiles/InputStream.h Src/stContainers/String.cpp Src/stContainers/String.h Src/stEvents/EventHandler.cpp Src/stEvents/EventHandler.h Src/stGraphics/Material.cpp Src/stGraphics/Material.h Src/stGraphics/GLTypes.h Src/stGraphics/Shader.cpp Src/stGraphics/Shader.h)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/usr/local/include -fno-exceptions")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework Cocoa -framework OpenGL -framework IOKit")

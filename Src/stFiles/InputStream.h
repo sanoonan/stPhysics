@@ -12,10 +12,12 @@ namespace stFiles {
 class InputStream : stUtils::NonCopyable
 {
 public:
+    static bool ReadFileToString( stContainers::String& outString, const char* pszFilePath );
+
+private:
     bool Open( const char* pszFilePath );
     bool ReadFile( stContainers::String& outString );
 
-private:
     bool IsOpen() const { return _stream.is_open(); }
 
 private:

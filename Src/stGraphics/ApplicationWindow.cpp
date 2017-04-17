@@ -32,7 +32,7 @@ bool ApplicationWindow::Open( const char* pszName, const stMaths::Vec2i& size )
     ST_Ensure( _glfwWindow = glfwCreateWindow( size.W(), size.H(), pszName, NULL, NULL ) );
     glfwMakeContextCurrent( _glfwWindow );
 
-    ST_ReturnBool( "ApplicationWindow::Open() - failed!" );
+    ST_ReturnBool( ( "ApplicationWindow::Open() - failed!" ) );
 }
 
 void ApplicationWindow::Close()

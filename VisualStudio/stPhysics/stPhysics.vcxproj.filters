@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stUtils">
+      <UniqueIdentifier>{d2b0ce22-1383-4e05-b48b-703fc59ca6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stTypes">
+      <UniqueIdentifier>{b523dea1-d887-4f05-aaf8-b3ea8fb33a59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stMaths">
+      <UniqueIdentifier>{382988ba-4241-4f71-bb3a-4c0280b5b557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stGraphics">
+      <UniqueIdentifier>{ab37ff7a-b859-4953-845b-51d88fc838a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stFiles">
+      <UniqueIdentifier>{04197975-4b77-4131-8e16-c1b808cda2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stEvents">
+      <UniqueIdentifier>{f1c98c0f-9304-4ea9-bf10-df91b44e210c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stContainers">
+      <UniqueIdentifier>{933b3529-8612-405f-b6d1-500d245ff867}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\stContainers\String.h">
+      <Filter>stContainers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stEvents\EventHandler.h">
+      <Filter>stEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stFiles\InputStream.h">
+      <Filter>stFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\GLWrapper.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\Material.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\Renderer.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\Shader.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\Tri.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\ApplicationWindow.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\GLFWInclude.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stGraphics\GLTypes.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stMaths\Vec3.h">
+      <Filter>stMaths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stMaths\VecDeclarations.h">
+      <Filter>stMaths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stMaths\Vec.h">
+      <Filter>stMaths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stMaths\Vec2.h">
+      <Filter>stMaths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stTypes\Types.h">
+      <Filter>stTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\Log.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\NonCopyable.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\StaticClass.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\Assertions.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\ErrorHandling.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\stContainers\String.cpp">
+      <Filter>stContainers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stEvents\EventHandler.cpp">
+      <Filter>stEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stFiles\InputStream.cpp">
+      <Filter>stFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\GLWrapper.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\Material.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\Renderer.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\Shader.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\Tri.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stGraphics\ApplicationWindow.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stMaths\Vec3.cpp">
+      <Filter>stMaths</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stMaths\Vec.cpp">
+      <Filter>stMaths</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stMaths\Vec2.cpp">
+      <Filter>stMaths</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stUtils\Log.cpp">
+      <Filter>stUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\main.cpp" />
+  </ItemGroup>
+</Project>

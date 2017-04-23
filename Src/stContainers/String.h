@@ -12,6 +12,8 @@ public:
     String& Append( const char* pszValue );
     String& Append( const char value );
 
+    String& Append( const float value );
+
     const char* CStr() const { return _string.c_str(); }
 
 private:

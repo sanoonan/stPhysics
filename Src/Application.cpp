@@ -1,9 +1,11 @@
 #include "Application.h"
 
+#include "stContainers/String.h"
 #include "stEvents/EventHandler.h"
 #include "stGraphics/GLWrapper.h"
 #include "stMaths/Vec2.h"
 #include "stUtils/ErrorHandling.h"
+
 
 namespace Application {
 
@@ -29,6 +31,8 @@ void Application::RunLoop()
 
 void Application::Update()
 {
+    UpdateFrameRateCounter();
+
     stEvents::EventHandler::PollEvents();
 }
 
@@ -37,6 +41,21 @@ void Application::Render()
     stGraphics::GLWrapper::PreRender();
 
     _window.SwapBuffers();
+}
+
+void Application::UpdateFrameRateCounter()
+{
+    _frameRateCounter.Update();
+
+    stContainers::String title;
+    title
+        .Append( "FPS: [ " )
+        .Append( _frameRateCounter.GetFrameRate() )
+        .Append( " ]. Time: [ " )
+        .Append( _frameRateCounter.GetFrameDurationMS() )
+        .Append( " ]ms" );
+
+    _window.SetTitle( title.CStr() );
 }
 
 } //Application

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "stGraphics/ApplicationWindow.h"
+#include "stUtils/FrameRateCounter.h"
 #include "stUtils/NonCopyable.h"
 
 namespace Application {
@@ -22,11 +23,15 @@ private:
     void Update();
     void Render();
 
+    void UpdateFrameRateCounter();
+
 private:
     Application() = default;
 
 private:
     stGraphics::ApplicationWindow _window;
+
+    stUtils::FrameRateCounter _frameRateCounter;
 };
 
 } //Application

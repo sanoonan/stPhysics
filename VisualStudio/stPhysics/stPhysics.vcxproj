@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Src\Application.h" />
+    <ClInclude Include="..\..\Src\stContainers\RingBuffer.h" />
     <ClInclude Include="..\..\Src\stContainers\String.h" />
     <ClInclude Include="..\..\Src\stEvents\EventHandler.h" />
     <ClInclude Include="..\..\Src\stFiles\InputStream.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="..\..\Src\stTypes\Types.h" />
     <ClInclude Include="..\..\Src\stUtils\Assertions.h" />
     <ClInclude Include="..\..\Src\stUtils\ErrorHandling.h" />
+    <ClInclude Include="..\..\Src\stUtils\FrameRateCounter.h" />
     <ClInclude Include="..\..\Src\stUtils\Log.h" />
     <ClInclude Include="..\..\Src\stUtils\NonCopyable.h" />
     <ClInclude Include="..\..\Src\stUtils\StaticClass.h" />
@@ -176,6 +178,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Src\Application.cpp" />
     <ClCompile Include="..\..\Src\main.cpp" />
+    <ClCompile Include="..\..\Src\stContainers\RingBuffer.cpp" />
     <ClCompile Include="..\..\Src\stContainers\String.cpp" />
     <ClCompile Include="..\..\Src\stEvents\EventHandler.cpp" />
     <ClCompile Include="..\..\Src\stFiles\InputStream.cpp" />
@@ -187,7 +190,7 @@
     <ClCompile Include="..\..\Src\stMaths\Vec.cpp" />
     <ClCompile Include="..\..\Src\stMaths\Vec2.cpp" />
     <ClCompile Include="..\..\Src\stMaths\Vec3.cpp" />
-    <ClCompile Include="..\..\Src\stUtils\Log.cpp" />
+    <ClCompile Include="..\..\Src\stUtils\FrameRateCounter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

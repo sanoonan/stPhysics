@@ -85,6 +85,12 @@
     <ClInclude Include="..\..\Src\stGraphics\GLWrapper.h">
       <Filter>stGraphics</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Src\stUtils\FrameRateCounter.h">
+      <Filter>stUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\stContainers\RingBuffer.h">
+      <Filter>stContainers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\stContainers\String.cpp">
@@ -117,13 +123,16 @@
     <ClCompile Include="..\..\Src\stMaths\Vec2.cpp">
       <Filter>stMaths</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\stUtils\Log.cpp">
-      <Filter>stUtils</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\main.cpp" />
     <ClCompile Include="..\..\Src\Application.cpp" />
     <ClCompile Include="..\..\Src\stGraphics\GLWrapper.cpp">
       <Filter>stGraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stUtils\FrameRateCounter.cpp">
+      <Filter>stUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\stContainers\RingBuffer.cpp">
+      <Filter>stContainers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

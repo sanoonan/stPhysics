@@ -7,12 +7,12 @@
 
 namespace stGraphics {
 
-bool ApplicationWindow::Open( const char* pszName, const stMaths::Vec2i& size )
+bool ApplicationWindow::Open( const char* pszTitle, const stMaths::Vec2i& size )
 {
-    ST_Ensure( pszName );
+    ST_Ensure( pszTitle );
     ST_Ensure( size.AllGreaterThanZero() );
 
-    ST_Ensure( !_glfwWindow );
+    ST_Ensure( !_pGlfwWindow );
 
 #if defined( APPLE )
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
@@ -23,15 +23,15 @@ bool ApplicationWindow::Open( const char* pszName, const stMaths::Vec2i& size )
 
     ST_Ensure( glfwInit() );
 
-    ST_Ensure( _glfwWindow = glfwCreateWindow( size.W(), size.H(), pszName, NULL, NULL ) );
-    glfwMakeContextCurrent( _glfwWindow );
+    ST_Ensure( _pGlfwWindow = glfwCreateWindow( size.W(), size.H(), pszTitle, NULL, NULL ) );
+    glfwMakeContextCurrent( _pGlfwWindow );
 
     ST_ReturnBool( ( "ApplicationWindow::Open() - failed!" ) );
 }
 
 void ApplicationWindow::Close()
 {
-    if( !_glfwWindow )
+    if( !_pGlfwWindow )
         return;
 
     glfwTerminate();
@@ -39,18 +39,26 @@ void ApplicationWindow::Close()
 
 bool ApplicationWindow::ShouldClose() const
 {
-    if( _glfwWindow )
-        return glfwWindowShouldClose( _glfwWindow );
+    if( _pGlfwWindow )
+        return glfwWindowShouldClose( _pGlfwWindow );
 
     return true;
 }
 
 void ApplicationWindow::SwapBuffers()
 {
-    ST_Ensure( _glfwWindow );
-    glfwSwapBuffers( _glfwWindow );
+    ST_Ensure( _pGlfwWindow );
+    glfwSwapBuffers( _pGlfwWindow );
 
     ST_Return( ( "ApplicationWindow::SwapBuffers() - failed!" ) );
+}
+
+void ApplicationWindow::SetTitle( const char* pszTitle )
+{
+    ST_Assert( _pGlfwWindow );
+    ST_Assert( pszTitle );
+
+    glfwSetWindowTitle( _pGlfwWindow, pszTitle );
 }
 
 } //stGraphics

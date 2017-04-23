@@ -4,6 +4,8 @@
 #include <stUtils/Log.h>
 #include <stEvents/EventHandler.h>
 #include "stGraphics/ApplicationWindow.h"
+#include "stGraphics/Material.h"
+#include "stGraphics/Tri.h"
 #include "stMaths/Vec2.h"
 
 int main ()
@@ -14,15 +16,23 @@ int main ()
 
     stGraphics::Renderer::Get().Init();
 
-//    stFiles::InputStream iStream;
-//    iStream.Open( "../Assets/Shaders/sample.vert" );
-//    stContainers::String string;
-//    iStream.ReadFile( string );
-//    stUtils::Log::Info( string.CStr() );
+    stGraphics::Tri testTri{
+        stMaths::Vec3{ 0.0f, 0.5f, 0.0f },
+        stMaths::Vec3{ 0.5f, -0.5f, 0.0f },
+        stMaths::Vec3{ -0.5f, -0.5f, 0.0f } };
+
+    stGraphics::Material testMaterial;
+    testMaterial.Load( "../../Assets/Shaders/sample.vert", "../../Assets/Shaders/sample.frag" );
 
     while( !ApplicationWindow::Get().ShouldClose() )
     {
         stEvents::EventHandler::PollEvents();
+
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+
+        testTri.Render( testMaterial );
+
+        ApplicationWindow::Get().SwapBuffers();
     }
 
     ApplicationWindow::Get().Close();

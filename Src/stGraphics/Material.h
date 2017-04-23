@@ -1,19 +1,23 @@
 #pragma once
 
-#include <memory>
+#include "GLTypes.h"
 #include "stUtils/NonCopyable.h"
 
 namespace stGraphics {
 
-class Material
+class Material : stUtils::NonCopyable
 {
 public:
-    bool Load( const char* pszVertexShader, const char* pszFragmentShader );
-
     ~Material();
 
+    bool Load( const char* pszVertexShader, const char* pszFragmentShader );
+
+    bool IsLoaded() const { return _shaderProgram != 0; }
+
+    GLuint GetHandle() const { return _shaderProgram; }
+
 private:
-    Material() = default;
+    GLuint _shaderProgram{ 0 };
 };
 
 } //stGraphics

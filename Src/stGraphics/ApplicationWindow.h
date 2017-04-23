@@ -19,6 +19,8 @@ public:
 
     bool ShouldClose() const;
 
+    void SwapBuffers();
+
 private:
     ApplicationWindow() = default;
 

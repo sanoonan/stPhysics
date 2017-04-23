@@ -17,8 +17,10 @@ public:
 
     bool Load( const char* pszShaderPath, const Type type );
 
+    GLuint GetHandle() const { return _shader; }
+
 private:
-    GLuint _shader;
+    GLuint _shader{ 0 };
 };
 
 } //stGraphics

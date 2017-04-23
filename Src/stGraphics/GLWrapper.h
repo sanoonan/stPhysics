@@ -13,8 +13,6 @@ class GLWrapper : stUtils::StaticClass
 {
 public:
     static bool Init();
-
-    static void DrawTri( const glVec3* pVerts );
 };
 
 } //stGraphics

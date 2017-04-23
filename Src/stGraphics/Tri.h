@@ -4,15 +4,19 @@
 
 namespace stGraphics {
 
+class Material;
+
 class Tri
 {
-    Tri( const stMaths::Vec3& v1, const stMaths::Vec3& v2, const stMaths::Vec3& v3 ) :
-            _verts{ v1, v2, v3 } {}
+public:
+    Tri( const stMaths::Vec3& v1, const stMaths::Vec3& v2, const stMaths::Vec3& v3 );
 
-    void Render();
+    void Render( const Material& material );
 
 private:
     glVec3 _verts[ 3 ];
+
+    GLuint _vao{ 0 };
 };
 
 } //stGraphics

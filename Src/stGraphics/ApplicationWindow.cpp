@@ -51,4 +51,12 @@ bool ApplicationWindow::ShouldClose() const
     return true;
 }
 
+void ApplicationWindow::SwapBuffers()
+{
+    ST_Ensure( _glfwWindow );
+    glfwSwapBuffers( _glfwWindow );
+
+    ST_Return( ( "ApplicationWindow::SwapBuffers() - failed!" ) );
+}
+
 } //stGraphics

@@ -7,12 +7,6 @@
 
 namespace stGraphics {
 
-ApplicationWindow& ApplicationWindow::Get()
-{
-    static ApplicationWindow instance;
-    return instance;
-}
-
 bool ApplicationWindow::Open( const char* pszName, const stMaths::Vec2i& size )
 {
     ST_Ensure( pszName );

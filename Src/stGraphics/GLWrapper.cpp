@@ -8,6 +8,7 @@ namespace stGraphics {
 static bool InitGLEW();
 static void PrintGLVersionInfo();
 static void EnableDepthTesting();
+static void ClearBuffer();
 
 bool GLWrapper::Init()
 {
@@ -18,6 +19,11 @@ bool GLWrapper::Init()
     EnableDepthTesting();
 
     ST_ReturnBool( ( "GLWrapper::Init() - failed!" ) );
+}
+
+void GLWrapper::PreRender()
+{
+    ClearBuffer();
 }
 
 static bool InitGLEW()
@@ -40,6 +46,11 @@ static void EnableDepthTesting()
 {
     glEnable( GL_DEPTH_TEST );
     glDepthFunc( GL_LESS );
+}
+
+static void ClearBuffer()
+{
+    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 }
 
 } //stGraphics

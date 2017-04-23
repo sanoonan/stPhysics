@@ -33,13 +33,7 @@
     <ClInclude Include="..\..\Src\stFiles\InputStream.h">
       <Filter>stFiles</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\stGraphics\GLWrapper.h">
-      <Filter>stGraphics</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Src\stGraphics\Material.h">
-      <Filter>stGraphics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\stGraphics\Renderer.h">
       <Filter>stGraphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\stGraphics\Shader.h">
@@ -87,6 +81,10 @@
     <ClInclude Include="..\..\Src\stUtils\ErrorHandling.h">
       <Filter>stUtils</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Src\Application.h" />
+    <ClInclude Include="..\..\Src\stGraphics\GLWrapper.h">
+      <Filter>stGraphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\stContainers\String.cpp">
@@ -98,13 +96,7 @@
     <ClCompile Include="..\..\Src\stFiles\InputStream.cpp">
       <Filter>stFiles</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\stGraphics\GLWrapper.cpp">
-      <Filter>stGraphics</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\stGraphics\Material.cpp">
-      <Filter>stGraphics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\stGraphics\Renderer.cpp">
       <Filter>stGraphics</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\stGraphics\Shader.cpp">
@@ -129,5 +121,9 @@
       <Filter>stUtils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\main.cpp" />
+    <ClCompile Include="..\..\Src\Application.cpp" />
+    <ClCompile Include="..\..\Src\stGraphics\GLWrapper.cpp">
+      <Filter>stGraphics</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

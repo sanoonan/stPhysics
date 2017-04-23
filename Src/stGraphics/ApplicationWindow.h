@@ -11,18 +11,12 @@ namespace stGraphics {
 class ApplicationWindow : stUtils::NonCopyable
 {
 public:
-    static ApplicationWindow& Get();
-
-public:
     bool Open( const char* pszName, const stMaths::Vec2i& size );
     void Close();
 
     bool ShouldClose() const;
 
     void SwapBuffers();
-
-private:
-    ApplicationWindow() = default;
 
 private:
     GLFWwindow* _glfwWindow{ ST_NULL };

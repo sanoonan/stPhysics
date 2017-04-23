@@ -13,6 +13,8 @@ class GLWrapper : stUtils::StaticClass
 {
 public:
     static bool Init();
+
+    static void PreRender();
 };
 
 } //stGraphics

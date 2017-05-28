@@ -52,6 +52,7 @@ public:
     class ConstIterator
     {
     public:
+        //TODO - iterator should go from newest to oldest to mirror STL
         ConstIterator( const RingBuffer& buffer, const int index )
         {
             _pElement = &buffer[ 0 ] + index;
